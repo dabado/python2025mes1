@@ -10,35 +10,34 @@ horasSemanales = 40
 salarioBase = horasSemanales * precioHora
 
 
-if horas < 40 :
+if horas <= horasSemanales :
     horasExtra = 0
-elif horas >= 40:
+elif horas > horasSemanales:
     horasExtra = (horas  - horasSemanales ) * (precioHora + 2)   
 
 salarioTotal= salarioBase + horasExtra
 
 
 if kilometros <= 100:
-    dietas = "locales"
+    dietas = "LOCALES"
 elif kilometros >= 101 and kilometros <= 500:
-    dietas = "provinciales"
+    dietas = "PROVINCIALES"
 elif kilometros > 500:
-    dietas = "nacionales"
+    dietas = "NACIONALES"
 
 
 
-
-if salarioBase <= 250:
+if salarioTotal <= 250:
     retenciones = 0
-elif salarioBase >= 251 and precioHora <= 600:
+elif salarioTotal >= 251 and precioHora <= 600:
     retenciones = 20
-elif salarioBase >= 600:
+elif salarioTotal >= 600:
     retenciones = 40
 
+print("------------------------------------------------------------------------")
+print(f"dietas:     {dietas}                   retencion:  {retenciones} %")
 print("--------")
-print(f"dietas:{dietas};                    retencion:  {retenciones} %")
-print("--------")
-print(f"salario Base :      {salarioBase} euros,     Horas Extra :   {horasExtra} euros")
+print(f"salario Base :      {salarioBase} euros     Horas Extra :   {horasExtra} euros")
 print("--------")
 print(f"el salario total es :   {salarioTotal} euros ")
 print("                             --------")
