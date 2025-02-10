@@ -35,4 +35,27 @@ print(f"5 _ el resultado de Sumatorio : {ResultadoSumatorio}")
 ResultadoSumatorioEntreSiete = trunc(ResultadoSumatorio // 7)
 print(f"6 _ el resultado de Sumatorio entre siete: {ResultadoSumatorioEntreSiete}")
 ResultadoSumatorioMenosSumatorioEntreSietePorsiete = trunc((ResultadoSumatorio - ResultadoSumatorioEntreSiete) * 7)
+Resultado = ResultadoSumatorioMenosSumatorioEntreSietePorsiete
 print(f"7 _ ResultadoSumatorio Menos SumatorioEntreSiete Por siete es : {ResultadoSumatorioMenosSumatorioEntreSietePorsiete}")
+diasDeSemana = ""
+if Resultado == 0:
+    print(f"dia de la semana SABADO", Resultado)
+elif Resultado == 1:
+    print(f"dia de la semana DOMINGO", Resultado)
+
+elif Resultado == 2:
+    print(f"dia de la semana LUNES", Resultado)
+
+elif Resultado == 3:
+    print(f"dia de la semana MARTES", Resultado)
+
+elif Resultado == 4:
+    print(f"dia de la semana Miercoles", Resultado)
+
+elif Resultado == 5:
+    print(f"dia de la semana JUEVES", Resultado)
+
+elif Resultado == 6:
+    print(f"dia de la semana VIERNES", Resultado)
+else:
+    print(f"revisa las operaciones")
