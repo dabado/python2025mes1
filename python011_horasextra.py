@@ -27,7 +27,14 @@ elif salarioBase >= 251 and precioHora <= 600:
 elif salarioBase >= 600:
     retenciones = 40
 
-
+print("--------")
 print(f"dietas:{dietas}; retencion:{retenciones} %;")
+print("--------")
 print(f"salario Base : {salarioBase} euros, Horas Extra : {horasExtra} euros")
+print("--------")
 print(f"el salario total es : {salarioTotal}")
+print("--------")
+print("--------")
+
+
+
