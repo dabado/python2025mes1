@@ -4,8 +4,9 @@ print(f"introduce precio de la hora trabajada")
 precioHora = int(input())
 print(f"introduce los kilometros")
 kilometros = int(input())
-salarioBase = 40 * precioHora
 horasSemanales = 40
+salarioBase = horasSemanales * precioHora
+
 horasExtra = (horas  - horasSemanales ) * (precioHora + 2)
 salarioTotal= salarioBase + horasExtra
 
