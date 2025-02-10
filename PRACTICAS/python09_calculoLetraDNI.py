@@ -1,7 +1,7 @@
 #( nº DNI - (ENTERO(nº DNI / 23) * 23
 print(F"introducir DNI sin letra")
-numDNI=input()
-DNILetra = int(numDNI) - ((int(numDNI) // 23 )* 23)
+numDNI=int(input())
+DNILetra = numDNI - int(numDNI / 23 )* 23
 print(f"El resultado de la operacion es : {DNILetra}")
 
 
