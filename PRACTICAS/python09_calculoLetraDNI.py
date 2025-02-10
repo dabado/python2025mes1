@@ -12,11 +12,11 @@ elif DNILetra == 1 :
 elif DNILetra == 2 :
     print(f"la letra es W ")
 elif DNILetra == 3 :
-    print(f"la letra es A")
+    print(f"la letra es A, el DNI completo es {numDNI}-A")
 elif DNILetra == 4 :
-    print(f"la letra es G")
+    print(f"la letra es G, el DNI completo es {numDNI}-G")
 elif DNILetra == 5 :
-    print(f"la letra es M")
+    print(f"la letra es M, el DNI completo es {numDNI}-M")
 elif DNILetra == 6 :
     print(f"la letra es Y")
 elif DNILetra == 7 :
