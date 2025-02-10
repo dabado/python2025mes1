@@ -15,7 +15,7 @@ if horas <= horasSemanales :
 elif horas > horasSemanales:
     horasExtra = (horas  - horasSemanales ) * (precioHora + 2)   
 
-salarioTotal= salarioBase + horasExtra
+salarioTotal = salarioBase + horasExtra
 
 
 if kilometros <= 100:
