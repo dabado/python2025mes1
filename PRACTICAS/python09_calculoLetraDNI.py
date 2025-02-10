@@ -2,7 +2,9 @@
 print(F"introducir DNI sin letra")
 numDNI=input()
 DNILetra = int(numDNI) - ((int(numDNI) // 23 )* 23)
-print(DNILetra)
+print(f"El resultado de la operacion es : {DNILetra}")
+
+
 if DNILetra == 0 :
     print(f"la letra es T")
 elif DNILetra == 1 :
