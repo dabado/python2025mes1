@@ -42,6 +42,7 @@ print("--------")
 print(f"el salario total es :   {salarioTotal} euros ")
 print("                             --------")
 print("                             --------")
+print("------------------------------------------------------------------------")
 
 
 
