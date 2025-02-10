@@ -32,7 +32,7 @@ ResultadoDividirAnualentreCuatrocientos = trunc(numAnual // 400)
 print(f"4 _ el resultado de dividir el año entre cuatrocientos es : {ResultadoDividirAnualentreCuatrocientos}")
 ResultadoSumatorio = trunc((numDia + (numMes * 2 ) + numAnual + ResultadoMultiplicar + ResultadoDividirAnualentreCien) - (ResultadoDividirAnualentreCien + (ResultadoDividirAnualentreCuatro + 2)))
 print(f"5 _ el resultado de Sumatorio : {ResultadoSumatorio}")
-ResultadoSumatorioEntreSiete = trunc(ResultadoSumatorio // 7)
+ResultadoSumatorioEntreSiete = trunc(ResultadoSumatorio / 7)
 print(f"6 _ el resultado de Sumatorio entre siete: {ResultadoSumatorioEntreSiete}")
 ResultadoSumatorioMenosSumatorioEntreSietePorsiete = trunc((ResultadoSumatorio - ResultadoSumatorioEntreSiete) * 7)
 Resultado = ResultadoSumatorioMenosSumatorioEntreSietePorsiete
