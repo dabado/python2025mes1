@@ -7,3 +7,7 @@ for i in numero:
     lista.append(int(i))
 print(lista)
 print(f"suma: " ,sum)
+
+
+
+
