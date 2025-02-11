@@ -3,6 +3,7 @@ numero = input()
 lista=[]
 sum = 0
 for i in numero[:]:
-    print(i)
+    sum= sum + int(i)
     lista.append(int(i))
 print(lista)
+print(f"suma: " ,sum)
