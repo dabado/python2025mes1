@@ -25,6 +25,7 @@ print("introduzca el segundo numero")
 num2=input()
 mostrarMenu()
 opcion=0
+
 while (opcion != 4):
     mostrarMenu()
     opcion=int(input())
@@ -41,7 +42,7 @@ while (opcion != 4):
             resultado = "ha elegido salir .. saliendo" 
             print(resultado)
     else:
-          mostrarMenu()
+          print("opcion incorrecta, seleccione de nuevo")
             
     
 #print(resultado)
