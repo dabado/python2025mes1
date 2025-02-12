@@ -16,7 +16,7 @@ def mostrarMenu():
     print("1_ sumar")
     print("2_ restar")
     print("3_ multiplica")
-    print("0_ salir")
+    print("4_ salir")
     
 print("Metodos return")
 print("Introduzca el primer numnero")
@@ -28,9 +28,6 @@ opcion=0
 while (opcion != 4):
     mostrarMenu()
     opcion=int(input())
-
-
-    
     if opcion == 1:
             resultado=sumar(num1, num2)
             print(resultado)
@@ -40,8 +37,8 @@ while (opcion != 4):
     elif opcion == 3:
             resultado = multiplicar(num1, num2)
             print(resultado)
-    elif opcion == 0:
-            resultado = "ha elegido salir .. saliendo"
+    elif opcion == 4:
+            resultado = "ha elegido salir .. saliendo" 
             print(resultado)
     else:
           mostrarMenu()
