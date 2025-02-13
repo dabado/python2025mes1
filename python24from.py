@@ -1,4 +1,4 @@
-from python23calculadoraVersion3metodos import *
+from python23calculadoraVersion3metodos import mostrarMenu
 
 mostrarMenu()
 

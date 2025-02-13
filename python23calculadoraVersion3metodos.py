@@ -23,15 +23,17 @@ def getNumeroComprobado():
         print("Introduzca  numnero")
         num=input()
         while num.isdigit() == False:
-            print("tiene que introducir un numero")
-            num=int(input())
+            print(f"tiene que introducir un numero")
+            num=input()
         print(f"numero guardado {num}")
-        return num
+        return int(num)
 
 num1 = getNumeroComprobado()
 num2 = getNumeroComprobado()
 print("Metodos return")
 
+## esta parte la hemos subsctituido por la funcion getNumeroComprobado
+##
 #print("Introduzca el primer numnero")
 #num1=input()
 #while num1.isdigit() == False:
@@ -48,10 +50,10 @@ print("Metodos return")
 #    num2=input()
 #print(f"numero2 guardado {num2}")
 
-
-
-
 #mostrarMenu()
+
+
+
 opcion=99
 
 while (opcion != 0):
