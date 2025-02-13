@@ -3,9 +3,11 @@ def validacionesISBN(isbn=0000000000):
     
     longitud = len(isbn)
     if (longitud != 10):
-        print("El número ISBN debe tener 10 caracteres")
+        #print("El número ISBN debe tener 10 caracteres")
+        return False
     elif (isbn.isdigit() == False):
-        print("El número ISBN debe contener solo números")
+        return False
+        #print("El número ISBN debe contener solo números")
     else:
         suma = 0
         for i in range(longitud):
