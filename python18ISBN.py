@@ -21,9 +21,9 @@ for i in numero:
         ejecucion = letra * int(listatotal)
         listatotal -= 1
  
-        print(letra * listatotal)
+        print(letra , listatotal)
     
-print(f"suma: " ,sum)
+#print(f"suma: " ,sum)
 
 
 
