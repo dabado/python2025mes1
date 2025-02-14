@@ -1,7 +1,15 @@
 
 def sumar(num1, num2):
-    resultado = int(num1) + int(num2) 
-    return resultado
+    
+        try:
+          resultado = int(num1) + int(num2) 
+        except ValueError:        
+                print("Error, debes introducir un número")    
+        except ZeroDivisionError:        
+                print("¡¡¡Error!!!. El divisor no puede ser cero")
+        except:
+                print("error generico")
+        return resultado
 
 def restar(num1, num2):
     resultado = int(num1) - int(num2) 
