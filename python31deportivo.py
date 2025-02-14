@@ -1,0 +1,26 @@
+from class31deportivo import deportivo
+
+DAvidDeportivo = deportivo()
+DAvidDeportivo.arrancar()
+DAvidDeportivo.acelerar()
+print(DAvidDeportivo.velocidad)
+
+DAvidDeportivo = deportivo()
+print(DAvidDeportivo.estado)
+DAvidDeportivo.acelerar()
+print(DAvidDeportivo.velocidad)
+DAvidDeportivo.arrancar()
+print(DAvidDeportivo.estado)
+DAvidDeportivo.acelerar()
+DAvidDeportivo.turbo()
+DAvidDeportivo.acelerar()
+DAvidDeportivo.frenar()
+DAvidDeportivo.acelerar()
+DAvidDeportivo.acelerar()
+print(DAvidDeportivo.estado)
+DAvidDeportivo.detener()
+print(DAvidDeportivo.estado)
+print(DAvidDeportivo.velocidad)
+DAvidDeportivo.turbo()
+print(DAvidDeportivo.turbo())
+
