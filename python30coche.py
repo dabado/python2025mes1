@@ -14,13 +14,6 @@ cocheDavid.detener()
 print(cocheDavid.estado)
 print(cocheDavid.velocidad)
 
-
-class deportivo(Coche):
-    velocidad = 100
-    turbo = 20
-
-
-DAvidDeportivo = deportivo()
-deportivo.arrancar
-deportivo.acelerar
-print(deportivo.velocidad)
+print(cocheDavid.estado)
+print(cocheDavid.velocidad)
+print(cocheDavid.Velocidad_Maxima())

@@ -1,12 +1,17 @@
 class Coche:
-    marca = ""
+    marca = "Clio"
     modelo = ""
     velocidad = 0
     estado = False
 
+
+    def Velocidad_Maxima(self): 
+        print(f"la velocidad maxima del coche {self.marca} es 140 ")
+        return 140
+    
     def acelerar(self):
         if (self.estado == False):
-            print("El coche no está arrancado.  Debe arrancar antes")
+            print("El coche no está arrancado {self.marca}.  Debe arrancar antes")
         else:
             self.velocidad += 20
         print("Velocidad actual " + str(self.velocidad))
