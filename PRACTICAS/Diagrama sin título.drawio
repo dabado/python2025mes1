@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/133.0.6943.84 Mobile/15E148 Safari/604.1" version="26.0.14">
   <diagram name="Página-1" id="f4SghKSi2Ip6ZndOtw0D">
-    <mxGraphModel dx="339" dy="512" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="116" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -15,19 +15,21 @@
             <mxPoint x="89.5" y="244.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VUU6hRvir32hyLVH66pQ-3" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="81" y="175" width="64" height="60" as="geometry" />
-        </mxCell>
+        <object label="Horno&amp;nbsp;" id="VUU6hRvir32hyLVH66pQ-3">
+          <mxCell style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+            <mxGeometry x="81" y="175" width="64" height="60" as="geometry" />
+          </mxCell>
+        </object>
         <mxCell id="VUU6hRvir32hyLVH66pQ-5" value="" style="whiteSpace=wrap;html=1;direction=south;" parent="1" vertex="1">
           <mxGeometry x="205" y="294" width="60" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="VUU6hRvir32hyLVH66pQ-6" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="VUU6hRvir32hyLVH66pQ-6" value="Lavavajillas&amp;nbsp;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="205" y="414" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yUteIukDcnw1P1U2wABH-1" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yUteIukDcnw1P1U2wABH-1" value="Lavadora" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="205" y="474" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yUteIukDcnw1P1U2wABH-2" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="yUteIukDcnw1P1U2wABH-2" value="Frigorifico" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="205" y="607" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yUteIukDcnw1P1U2wABH-3" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -50,6 +52,12 @@
         </mxCell>
         <mxCell id="yUteIukDcnw1P1U2wABH-12" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="72" y="275" width="9" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="yUteIukDcnw1P1U2wABH-13" value="" style="ellipse;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="206.99" y="306" width="56.03" height="42.08" as="geometry" />
+        </mxCell>
+        <mxCell id="yUteIukDcnw1P1U2wABH-14" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="261" y="264" width="9" height="111" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
