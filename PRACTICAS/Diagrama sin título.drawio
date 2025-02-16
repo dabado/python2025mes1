@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/133.0.6943.84 Mobile/15E148 Safari/604.1" version="26.0.14">
   <diagram name="Página-1" id="f4SghKSi2Ip6ZndOtw0D">
-    <mxGraphModel dx="1187" dy="2193" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2373" dy="3987" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -116,12 +116,12 @@
         <mxCell id="yUteIukDcnw1P1U2wABH-45" value="" style="group" vertex="1" connectable="0" parent="yUteIukDcnw1P1U2wABH-46">
           <mxGeometry x="250.00202173526395" width="340.7800000000002" height="230" as="geometry" />
         </mxCell>
-        <object label="Horno&amp;nbsp;" id="yUteIukDcnw1P1U2wABH-44">
+        <object label="Lavadora&amp;nbsp;" id="yUteIukDcnw1P1U2wABH-44">
           <mxCell style="whiteSpace=wrap;html=1;" vertex="1" parent="yUteIukDcnw1P1U2wABH-45">
             <mxGeometry x="170.3900000000001" width="170.39" height="230" as="geometry" />
           </mxCell>
         </object>
-        <object label="Horno&amp;nbsp;" id="yUteIukDcnw1P1U2wABH-40">
+        <object label="Lavavajillas&amp;nbsp;" id="yUteIukDcnw1P1U2wABH-40">
           <mxCell style="whiteSpace=wrap;html=1;" vertex="1" parent="yUteIukDcnw1P1U2wABH-45">
             <mxGeometry width="170.39" height="230" as="geometry" />
           </mxCell>
