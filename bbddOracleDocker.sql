@@ -47,4 +47,15 @@ select APELLIDO,(SALARIO + COMISION) as TOTALES from EMP order by TOTALES  where
 
 --- order by ordena respecto al cursor y where a partir de un campo de la tabla ---
 
+select APELLIDO, OFICIO, SALARIO, COMISION ,(SALARIO + COMISION) as TOTALES from EMP where (SALARIO + COMISION)  > 100000;
+select * from EMP order by DEPT_NO , OFICIO;
+select * from EMP where FECHA_ALT > '1/1/70' order by emp_no ;
 
+
+
+
+select * from plantilla where TURNO like 'N'; 
+
+
+
+select * from DOCTOR ; --- where FUNCION =  ; ---
