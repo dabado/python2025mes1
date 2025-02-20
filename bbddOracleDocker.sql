@@ -438,6 +438,65 @@ inner join hospital
 on sala.hospital_cod=hospital.hospital_cod
 
 
-select emp.APELLIDO
+select fecha_alt, emp.APELLIDO
 from emp
-when emp.fecha_alt > 1997 and emp.fecha_alt <  1998
+where emp.fecha_alt >= '01/01/95' and emp.fecha_alt <= '01/01/99' 
+
+
+select * from dept
+
+insert into dept values(50, 'python', 'Getafe');
+insert into dept (dept_no, dnombre) values (60, 'i+D')
+
+
+select  max(EMPLEADO_NO) + 1 from plantilla; 
+
+insert into plantilla(EMPLEADO_NO,APELLIDO,FUNCION,TURNO,HOSPITAL_COD)
+values( (select MAX(EMPLEADO_NO) + 1 from plantilla), 'Super Lopez', 'ENFERMERA', 'T', 22);
+select * from plantilla;
+
+rollback;
+
+commit;
+
+-- borrar el ultimo introcucido 
+
+delete from plantilla where EMPLEADO_NO=(select max(EMPLEADO_NO) from plantilla )
+
+
+update  plantilla set SALA_COD=4, SALARIO=35000 where APELLIDO='Super Lopez';
+
+
+update plantilla
+set salario=salario+1
+where FUNCION='INTERINO';
+
+update plantilla set SALARIO=(
+select SALARIO from plantilla where APELLIDO='karplus w.') where SALA_COD=4 
+
+select * from plantilla
+
+insert into plantilla(EMPLEADO_NO, APELLIDO, FUNCION, TURNO, HOSPITAL_COD ) 
+values(
+(select MAX(EMPLEADO_NO) + 1 from plantilla )
+,'Cabrales'
+,'ENFERMERA'
+,'M'
+,(select HOSPITAL_COD from HOSPITAL where NOMBRE='la paz2')
+);
+
+
+insert into plantilla(EMPLEADO_NO, APELLIDO, FUNCION, TURNO, HOSPITAL_COD ) 
+values(
+(select MAX(EMPLEADO_NO) + 1 from plantilla )
+,'Barroso David'
+,'ENFERMERO'
+,'M'
+,(select HOSPITAL_COD from HOSPITAL where NOMBRE='la paz2') || '54'
+);
+
+DELETE FROM PLANTILLA where HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL) or HOSPITAL_COD is null;
+
+
+select * from plantilla;
+
