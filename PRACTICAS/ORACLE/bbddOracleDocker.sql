@@ -244,6 +244,8 @@ on doctor.hospital_cod=hospital.hospital_cod
 where hospital.nombre = 'la paz';
 
 
+
+
 select hospital.hospital_cod, hospital.direccion, doctor.apellido, doctor.salario, doctor.especialidad
 from doctor
 inner join hospital
