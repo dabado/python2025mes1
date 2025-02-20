@@ -495,8 +495,58 @@ values(
 ,(select HOSPITAL_COD from HOSPITAL where NOMBRE='la paz2') || '54'
 );
 
+--elimina si no tiene hospital asignado o es nulo
 DELETE FROM PLANTILLA where HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL) or HOSPITAL_COD is null;
 
 
 select * from plantilla;
+
+INSERT INTO OCUPACION VALUES(59676,22,8,4);
+
+select ESPECIALIDAD, HOSPITAL_COD
+from doctor 
+where ESPECIALIDAD = 'Cardiologia'
+
+select HOSPITAL.NOMBRE, hospital.hospital_cod from HOSPITAL where HOSPITAL_COD in(select  DOCTOR.HOSPITAL_COD from DOCTOR)
+
+select DOCTOR.APELLIDO ,DOCTOR.ESPECIALIDAD, DOCTOR.hospital_cod from DOCTOR where HOSPITAL_COD in(select  HOSPITAL.HOSPITAL_COD from HOSPITAL) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- José Escriche Barrera como programador perteneciente al departamento de producción.  Tendrá un salario base de 70000 pts/mes y no cobrará comisión. 
+
+
+
+insert into emp(EMP_NO, APELLIDO, OFICIO, FECHA_ALT, SALARIO, COMISION, DEPT_NO ) 
+values(
+(select MAX(EMP_NO) + 1 from emp )
+,'José Escriche Barrera'
+,'PROGRAMADOR'
+,'20-02-2025'
+,70000
+,0
+,(select HOSPITAL_COD from HOSPITAL where NOMBRE='produccion') 
+);
+
+
+select * from dept
+
+
+
+insert into DEPT(DEPT.DNOMBRE, DEPT.DEPT_NO, DEPT.LOC) 
+values(
+'produccion'
+,(select MAX(DEPT.DEPT_NO) + 1 from dept )
+,Fuenlabrada
+);
 
