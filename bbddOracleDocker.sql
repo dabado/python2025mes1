@@ -594,3 +594,8 @@ update EMP
 set COMISION=(select EMP.COMISION from EMP where EMP.APELLIDO = 'arroyo') + 12000
 ,SALARIO=EMP.SALARIO + ((select EMP.SALARIO from EMP where EMP.APELLIDO = 'arroyo') * 10 / 100)
 where EMP.APELLIDO='sanchez'
+
+
+--elimina si no tiene hospital asignado o es nulo
+DELETE FROM PLANTILLA where HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL) or HOSPITAL_COD is null;
+
