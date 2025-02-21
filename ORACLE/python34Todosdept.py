@@ -15,10 +15,9 @@ for i in cursor:
     print(f"departamento: {i[1]}")
     print(f"ciudad: {i[2]}")
 
-cursor=conexion.cursor()
 cursor.execute(sql)
 
-###
+
 for numdepartamento, departamento, ciudad in cursor:
     print(f"dep: {departamento}, ciudad : {ciudad} , numeroDEP: {numdepartamento}")
 
