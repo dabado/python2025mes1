@@ -5,7 +5,7 @@ conexion=(oracledb.connect( user="system", password="oracle",dsn="localhost/xe")
 
 print(f".....conexion correcta { conexion}")
 
-sql="select APELLIDO, OFICIO  ,(SALARIO + COMISION) as SUELDO  from emp UNION select APELLIDO,ESPECIALIDAD ,SALARIO  from DOCTOR"
+sql="select APELLIDO, OFICIO  ,(SALARIO + COMISION) as SUELDO  from emp UNION select APELLIDO,ESPECIALIDAD ,SALARIO  from DOCTOR "
 cursor=conexion.cursor()
 cursor.execute(sql)
 if(not cursor):
