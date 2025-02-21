@@ -535,7 +535,7 @@ values(
 ,'20-02-2025'
 ,70000
 ,0
-,(select HOSPITAL_COD from HOSPITAL where NOMBRE='produccion') 
+,(select HOSPITAL_COD from HOSPITAL where NOMBRE='PROCUCCION') 
 );
 
 
@@ -545,8 +545,52 @@ select * from dept
 
 insert into DEPT(DEPT.DNOMBRE, DEPT.DEPT_NO, DEPT.LOC) 
 values(
-'produccion'
+'DEPPRODUCCION'
 ,(select MAX(DEPT.DEPT_NO) + 1 from dept )
-,Fuenlabrada
+,'Fuenlabrada'
 );
 
+
+rollback
+
+update DEPT
+set loc='Barcelona'
+where DNOMBRE='VENTAS';
+
+
+select * from EMP
+
+-- (ventas), se dan de alta dos empleados: Julián Romeral y Luis Alonso.  Su salario base es el menor que cobre un empleado, y cobrarán una comisión del 15% de dicho salario.
+insert into EMP(EMP.APELLIDO, EMP.SALARIO, EMP.COMISION, EMP.EMP_NO) 
+values(
+'Julian Romeral'
+,(select MIN(EMP.SALARIO)from EMP)
+,(select MIN(EMP.SALARIO)from EMP) * 15 / 100
+,(select MAX(EMP.EMP_NO) + 1 from EMP )
+)
+;
+
+select * from emp
+
+update EMP 
+set SALARIO=(SALARIO + (SALARIO * 15 / 100))
+
+rollback
+
+--Incrementar un 5% el salario de los interinos de la plantilla que trabajen en el turno de noche.
+update plantilla 
+set SALARIO= (SALARIO + (select plantilla.SALARIO from plantilla where plantilla.FUNCION = 'INTERINO' AND plantilla.TURNO = 'N') * 5 / 100 )
+
+--Incrementar en 5000 Pts. el salario de los empleados del departamento de ventas y del presidente, tomando en cuenta los que se dieron de alta antes que el presidente de la empresa.
+
+update EMP 
+set SALARIO=(SALARIO + 5000) 
+where EMP.FECHA_ALT < (select EMP.FECHA_ALT  from EMP where EMP.OFICIO='PRESIDENTE');
+
+--El empleado Sanchez ha pasado por la derecha a un compañero.  Debe cobrar de comisión 12.000 ptas más que el empleado Arroyo y su sueldo se ha incrementado un 10% respecto a su compañero.
+
+
+update EMP 
+set COMISION=(select EMP.COMISION from EMP where EMP.APELLIDO = 'arroyo') + 12000
+,SALARIO=EMP.SALARIO + ((select EMP.SALARIO from EMP where EMP.APELLIDO = 'arroyo') * 10 / 100)
+where EMP.APELLIDO='sanchez'
