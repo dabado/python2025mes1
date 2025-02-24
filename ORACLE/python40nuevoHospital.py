@@ -17,9 +17,18 @@ camasdatadata=str(input())
 
 sql=("insert into HOSPITAL values(" + iddata + ",'" + nombreddata + "','" + direcciondata + "','" + telefonodata + "','" + camasdatadata + "')") 
 print(str(sql))
-#print(sql)
 
+#sql=f"insert into HOSPITAL values({iddata} , {nombreddata} , {direcciondata} , {telefonodata} ,  {camasdatadata }"
 cursor=conexion.cursor()
 cursor.execute(sql)
-afectados = str(cursor.rowcount)
+print("filas insertadas :" + str(cursor.rowcount))
+#afectados = str(cursor.rowcount)
 conexion.commit()
+cursor.close()
+sqlread="select * from HOSPITAL"
+cursor=conexion.cursor()
+cursor.execute(sqlread)
+for fila in cursor:
+    print(fila)
+cursor.close()
+conexion.close()
