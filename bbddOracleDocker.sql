@@ -599,3 +599,15 @@ where EMP.APELLIDO='sanchez'
 --elimina si no tiene hospital asignado o es nulo
 DELETE FROM PLANTILLA where HOSPITAL_COD not in (select HOSPITAL_COD from HOSPITAL) or HOSPITAL_COD is null;
 
+select * from help
+
+
+
+
+
+select * from ENFERMO ;
+
+
+select APELLIDO, DIRECCION  from ENFERMO where INSCRIPCION=59076
+
+select * from ENFERMO where INSCRIPCION='10995'
