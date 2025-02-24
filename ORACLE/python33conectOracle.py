@@ -8,7 +8,6 @@ sql ="select * from DEPT"
 cursor = conexion.cursor()
 cursor.execute(sql)
 fila=cursor.fetchone()
-
 print(f"muestar una fila1 :  {fila}")
 fila=cursor.fetchone()
 print(f"muestar una fila2 :  {fila}")
@@ -20,11 +19,6 @@ fila=cursor.fetchone()
 print(f"muestar una fila5 :  {fila}")
 
 
-
-#for i in len(fila):
- #   fila=cursor.fetchone()
-  #  print(fila)
-   
 
 
 
