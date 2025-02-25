@@ -32,7 +32,8 @@ cursorupdate = conexion.cursor()
 
 cursorupdate.execute(sqlupdate, (incremento, hospitalCod))
 
-print("modificados :" + str(cursorupdate.rowcount))
+print("modificados : incrementados "+ str(incremento) + " en " + str(cursorupdate.rowcount) + " modificados." )
+
 
 print(cursorupdate.bindnames())
 cursor.execute(sql, (hospitalCod, ))
