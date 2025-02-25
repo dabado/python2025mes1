@@ -19,6 +19,10 @@ for fila in cursor:
 
 cursor.close()
 
+
+
+
+
 print("Seleccione un turno")
 seleccion=int(input())
 turno=listaTurnos[seleccion - 1]
@@ -26,10 +30,12 @@ turno=listaTurnos[seleccion - 1]
 sqlempleados="select * from plantilla where TURNO = :P1 "
 cursorEmpleados=conexion.cursor()
 cursorEmpleados.execute(sqlempleados, (turno, ))
-print(cursorEmpleados.rowcount)
+#print(cursorEmpleados.rowcount)
 for fila in cursorEmpleados:
     print(fila)
 
 
 cursorEmpleados.close()
+
+
 conexion.close()
