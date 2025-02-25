@@ -2,7 +2,8 @@ import oracledb
 def aumentoSalarioPorHospital():
         
     conexion=(oracledb.connect( user="system", password="oracle",dsn="localhost/xe"))
-    print(f".....conexion correcta { conexion}")
+    if conexion:
+        print(f".....conexion correcta { conexion}")
 
 
     print("indicanos el codigo de hospital a incrementar")
@@ -34,12 +35,12 @@ def aumentoSalarioPorHospital():
     
     cursorupdate.execute(sqlupdate, (incremento, hospitalCod))
 
-    print("modificados : incrementados "+ str(incremento) + "€ en " + str(cursorupdate.rowcount) + " modificados." )
+    print("modificados : incrementados " + str(incremento) + "€ en " + str(cursorupdate.rowcount) + " modificados." )
 
 
     print(cursorupdate.bindnames())
     # es necesario execute ??
-    
+
     cursor.execute(sql, (hospitalCod, ))
     for fila in cursor:
         print(fila)
