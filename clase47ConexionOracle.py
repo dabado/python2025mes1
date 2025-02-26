@@ -1,7 +1,7 @@
 import oracledb
 
 
-class conexionOracleEnfermos():
+class OracleEnfermos():
 
     def __init__(self):
         
@@ -10,21 +10,8 @@ class conexionOracleEnfermos():
         if conexion:
             print(f".....conexion correcta { conexion}")
        
-    def EliminaEnfermos(self, inscripcion):
-        cursor = self.conexion.cursor()
-        sql="delete from ENFERMO where INSCRIPCION=:inscripcion"
-        #print(sql)
-        cursor.execute(sql, (inscripcion, ))
-        afectados = str(cursor.rowcount)
-        self.conexion.commit()
-        cursor.close()
-        #elimina el enfermo sin el commit , como es distinta sesion desde sql dev se vé aun
-        print(f"afectados: {afectados}")
-        
-        print(f"cerramos conexion {self.conexion.close()}")
-        return afectados
 
-    def modificarApellidoEnfermoPorInscripcion(self, inscripcion, nuevo_apellido):
+    def modificarApellidoEnfermoPorInscripcion(self, nuevoapellido, inscripcion):
         
         
         sql="""
@@ -34,7 +21,7 @@ class conexionOracleEnfermos():
                 """
         print(sql)
         cursor = self.conexion.cursor()
-        cursor.execute(sql, (inscripcion, nuevo_apellido ))
+        cursor.execute(sql, (inscripcion ))
         afectados = str(cursor.rowcount)
         #cursor.close()
         return afectados
@@ -79,4 +66,56 @@ class conexionOracleEnfermos():
         self.conexion.close()
         print(f"fin de la ejecucion")
 
+
+    def EliminaEnfermos(self, inscripcion):
+        cursor = self.conexion.cursor()
+        sql="delete from ENFERMO where INSCRIPCION=:inscripcion"
+        #print(sql)
+        cursor.execute(sql, (inscripcion, ))
+        afectados = str(cursor.rowcount)
+        self.conexion.commit()
+        cursor.close()
+        #elimina el enfermo sin el commit , como es distinta sesion desde sql dev se vé aun
+        print(f"afectados: {afectados}")
+        
+        print(f"cerramos conexion {self.conexion.close()}")
+        return afectados
+    
+ 
+
+    def mostrarEmpleadoPorOficio(self):
+        sqlOficios="""
+                        SELECT DISTINCT oficio
+                        FROM emp
+                        """
+        cursorOficios=self.conexion.cursor()
+        cursorOficios.execute(sqlOficios)
+        contador = 1
+        listaOficios=[]
+        for fila in cursorOficios:
+                print(f"{contador} - {fila[0]}")
+                listaOficios.append(fila[0])
+                contador=contador + 1
+
+        cursorOficios.close()
+        #rint(oficios)
+        print(f"introduzca un oficio")
+        opcion = int(input())
+        oficio=listaOficios[opcion - 1]
+
+
+        sqlEmpleado="""
+                        SELECT  *
+                        FROM emp
+                        where oficio = :oficio
+                        """
+        cursor=self.conexion.cursor()
+        cursor.execute(sqlEmpleado, (oficio, ))
+        for fila in cursor:
+                #oficios=oficios.append(fila)
+                print(fila)
+
+        cursor.close()
+        
+        self.conexion.close()
 
