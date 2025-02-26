@@ -13,6 +13,12 @@ import clase47ConexionOracle
 #eliminados=conexion.EliminaEnfermos(inscripcion)
 #print(f"Enfermos Eliminados : {eliminados}")
 ###
+conexion=clase47ConexionOracle.conexionOracleEnfermos()
+
+modificados=conexion.modificarApellidoEnfermoPorInscripcion(inscripcion, nuevo_apellido)
+print(f"Enfermos modificados : {modificados}")
+
+
 
 clase47ConexionOracle.conexionOracleEnfermos()
 
@@ -20,7 +26,3 @@ print("introduzca nuevo apellido")
 nuevo_apellido=str(input())
 print("Introduzca una inscripcion a modificar")
 inscripcion=int(input())
-conexion=clase47ConexionOracle.conexionOracleEnfermos()
-
-modificados=conexion.modificarApellidoEnfermoPorInscripcion(inscripcion, nuevo_apellido)
-print(f"Enfermos modificados : {modificados}")
